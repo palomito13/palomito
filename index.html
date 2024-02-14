@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Quieres ser mi San Valentín?</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ffe6e6; /* Fondo rosita */
+        text-align: center;
+    }
+    #main {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    #image {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    #buttons {
+        margin-top: 20px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #noButton {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+</style>
+</head>
+<body>
+<div id="main">
+    <img id="image" src="pompompurin-vivian-kong.gif" alt="Imagen">
+    <h1>¿Queres ser mi San Valentín?</h1>
+    <div id="buttons">
+        <button id="yesButton">SI TE ADORO SOS LO MEJOR QUE ME PASO Y EL MEJOR JUGANDO FORTNITE Y ACEPTO QUE ME GANAS TODO EL TIEMPO EN EL CHINCHON Y NO ME ACERCO A TU NIVEL PORQUE SOY MALISIMA</button>
+        <br>
+        <br>
+        <button id="noButton">No</button>
+    </div>
+</div>
+<script>
+
+    const noButton = document.getElementById("noButton");
+    noButton.addEventListener("mouseover", () => {
+        const x = Math.floor(Math.random() * window.innerWidth);
+        const y = Math.floor(Math.random() * window.innerHeight);
+        noButton.style.left = `${x}px`;
+        noButton.style.top = `${y}px`;
+    });
+
+    const yesButton = document.getElementById("yesButton");
+    yesButton.addEventListener("click", () => {
+        window.location.href = "carta.html";
+    });
+</script>
+</body>
+</html>
